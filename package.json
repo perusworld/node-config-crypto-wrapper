@@ -1,0 +1,32 @@
+{
+  "name": "node-config-crypto-wrapper",
+  "version": "0.1.0",
+  "description": "Simple Crypto Wrapper For Config",
+  "main": "node-config-crypto-wrapper.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/perusworld/node-config-crypto-wrapper.git"
+  },
+  "keywords": [
+    "nodejs",
+    "config",
+    "crypto"
+  ],
+  "author": "Saravana Perumal Shanmugam <saravanaperumal@msn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perusworld/node-config-crypto-wrapper/issues"
+  },
+  "homepage": "https://github.com/perusworld/node-config-crypto-wrapper",
+  "dependencies": {
+    "async": "^2.3.0",
+    "config": "^1.25.1",
+    "merge": "^1.2.0"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}
