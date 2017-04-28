@@ -33,10 +33,10 @@ ConfigCryptoWrapper.prototype.iterateKeys = function (qu, obj, clonedObj) {
       }
     }
   }
-}
+};
 
 ConfigCryptoWrapper.prototype.parseConfigs = function (key, queueCallback, outerCallback) {
-  this.parseObj(config.get(key), queueCallback, outerCallback)
+  this.parseObj(config.get(key), queueCallback, outerCallback);
 };
 
 ConfigCryptoWrapper.prototype.parseObj = function (obj, queueCallback, outerCallback) {
@@ -83,9 +83,9 @@ ConfigCryptoWrapper.prototype.decrypt = function (obj, key, value, callback) {
     obj[key] = value;
     async.nextTick(() => {
       callback();
-    })
+    });
   }
-}
+};
 
 ConfigCryptoWrapper.prototype.encrypt = function (obj, key, value, callback) {
   if ('string' === typeof value && value.startsWith(this.conf.encryptKeyName)) {
@@ -101,10 +101,10 @@ ConfigCryptoWrapper.prototype.encrypt = function (obj, key, value, callback) {
   } else {
     obj[key] = value;
     async.nextTick(() => {
-      callback()
-    })
+      callback();
+    });
   }
-}
+};
 
 
 function DefaultCryptoHandler(opts) {
@@ -158,7 +158,7 @@ function DefaultConfigCryptoWrapper(cryptoOpts, configOpts) {
   DefaultConfigCryptoWrapper.super_.call(this, merge({
     cryptoHandler: new DefaultCryptoHandler(cryptoOpts),
   }, configOpts));
-};
+}
 
 util.inherits(DefaultConfigCryptoWrapper, ConfigCryptoWrapper);
 

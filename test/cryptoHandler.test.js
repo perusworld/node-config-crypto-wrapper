@@ -8,5 +8,5 @@ test('Test encyption/decryption using DefaultCryptoHandler', done => {
       expect(decryptedText).toBe(plainText);
       done();
     });
-  })
+  });
 });

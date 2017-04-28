@@ -1,5 +1,9 @@
 # Simple Crypto Wrapper For Config #
 
+[![bitHound Overall Score](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper/badges/score.svg)](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper)
+[![bitHound Dependencies](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper/badges/dependencies.svg)](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper/badges/code.svg)](https://www.bithound.io/github/perusworld/node-config-crypto-wrapper)
+
 Simple Crypto Wrapper For [Config](https://github.com/lorenwest/node-config)
 
 ## Install ##
