@@ -21,9 +21,9 @@ Assuming the following is config with and encrypted property
 ```javascript
 let cryptoWrapperApi = require('node-config-crypto-wrapper').wrapper();
 let cryptoWrapper = new cryptoWrapperApi.DefaultConfigCryptoWrapper({}, {});
-  cryptoWrapper.loadConfig('cryptoConfig', (err, cryptoConfig) => {
-    //cryptoConfig now has the field decrypted
-  });
+cryptoWrapper.loadConfig('cryptoConfig', (err, cryptoConfig) => {
+  //cryptoConfig now has the field decrypted
+});
 ```
 With the options
 ```javascript
@@ -35,6 +35,35 @@ let cryptoWrapper = new cryptoWrapperApi.DefaultConfigCryptoWrapper({
   decryptedFormat: 'utf8'
 }, {});
 cryptoWrapper.loadConfig('cryptoConfig', (err, cryptoConfig) => {
+  //cryptoConfig now has the field decrypted
+});
+```
+### Using custom crypto handler ###
+Assuming the following is config with and encrypted property
+```json
+{
+  "customCryptoConfig": {
+    "entry": "encrypted:This is a sample text"
+  }
+}
+```
+
+```javascript
+let cryptoWrapperApi = require('node-config-crypto-wrapper').wrapper();
+let customCryptoWrapper = new cryptoWrapperApi.ConfigCryptoWrapper({
+  //your crypto handler impl
+  cryptoHandler : {
+    //passthrough
+    encrypt: (str, callback) => {
+      callback(null, str);
+    },
+    //passthrough
+    decrypt: (cip, callback) => {
+      callback(null, cip);
+    }
+  }
+});
+customCryptoWrapper.loadConfig('customCryptoConfig', (err, cryptoConfig) => {
   //cryptoConfig now has the field decrypted
 });
 ```
