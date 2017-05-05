@@ -4,5 +4,8 @@
   },
   "customCryptoConfig": {
     "entry": "encrypted:This is a sample text"
+  },
+  "unencryptedCryptoConfig": {
+    "entry": "toencrypt:This is a sample text"
   }
 }
